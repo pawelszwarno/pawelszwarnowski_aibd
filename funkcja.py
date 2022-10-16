@@ -1,7 +1,11 @@
 # Pawel Szwarnowski - rysowanie wykresow funkcji kwadratowej w zadanym przedziale
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas
+
+
+matplotlib.use('TkAgg')
 
 
 def sqr_func(x):
@@ -29,7 +33,9 @@ data = {'name': ['Alice', 'Bob', 'Charlie', 'David', 'Erin'],
         'sex': ['Female', 'Male', 'Male', 'Male', 'Female']}
 
 dataframe = pandas.DataFrame(data=data)
-print(dataframe)
+print("Informacje o danych:")
 print(dataframe.info())
+print("Opis danych:")
 print(dataframe.describe())
-print(dataframe.head())
+print("Pierwsze trzy rekordy:")
+print(dataframe.head(3))
